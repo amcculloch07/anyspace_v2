@@ -16,8 +16,20 @@
 
       <% @ratings.each do |rating| %>
       <tr>
-        <td><%= rating.venue.address %></td>
-        <td><%= rating.user.email %></td>
+        <td>
+          <% if rating.venue.present? %>
+            <a href="/venues/<%= rating.venue.id %>">
+              <%= rating.venue.address %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if rating.user.present? %>
+            <a href="/users/<%= rating.user.id %>">
+              <%= rating.user.email %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/ratings/<%= rating.id %>" class="btn btn-primary">Show</a>
           

@@ -129,7 +129,13 @@
       <dd><%= @venue.rule_6 %></dd>
 
       <dt>Coordinator</dt>
-      <dd><%= @venue.coordinator_id %></dd>
+      <dd>
+        <% if @venue.coordinator.present? %>
+          <a href="/coordinators/<%= @venue.coordinator_id %>">
+            <%= @venue.coordinator.name %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Title</dt>
       <dd><%= @venue.title %></dd>
