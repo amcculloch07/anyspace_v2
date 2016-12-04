@@ -6,6 +6,8 @@ class VenuesController < ApplicationController
   end
 
   def show
+    @photo = Photo.new
+    @rating = Rating.new
     @venue = Venue.find(params[:id])
 
     render("venues/show.html.erb")
