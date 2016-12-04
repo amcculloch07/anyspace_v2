@@ -1,6 +1,8 @@
 class Venue < ApplicationRecord
   # Direct associations
 
+  belongs_to :coordinator
+
   has_many   :photos,
              :dependent => :destroy
 
