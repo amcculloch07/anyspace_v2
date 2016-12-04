@@ -5,6 +5,8 @@ class Rating < ApplicationRecord
 
   # Validations
 
+  validates :user_id, :uniqueness => true
+
   validates :user_id, :presence => true
 
   validates :venue_id, :uniqueness => true
