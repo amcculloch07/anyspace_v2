@@ -5,4 +5,6 @@ class Coordinator < ApplicationRecord
 
   # Validations
 
+  validates :phone_number, :presence => true
+
 end
