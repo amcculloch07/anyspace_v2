@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "venues#index"
   # Routes for the Coordinator resource:
   # CREATE
   get "/coordinators/new", :controller => "coordinators", :action => "new"
