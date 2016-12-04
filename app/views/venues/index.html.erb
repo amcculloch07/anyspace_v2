@@ -3,6 +3,351 @@
     Venues
     <a href="/venues/new" class="btn btn-lg btn-success">New Venue</a>
   </h1>
+</div><div class="row mb-1">
+  <div class="col-md-12">
+    <%= search_form_for @q, :class => "collapse", :id => "venues_filters" do |f| %>
+      <p class="lead">Narrow results:</p>
+
+        <div class="form-group">
+    <%= f.label :address_cont, "Address contains" %>
+    <%= f.text_field :address_cont, :class => "form-control", :placeholder => "Address contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :title_cont, "Title contains" %>
+    <%= f.text_field :title_cont, :class => "form-control", :placeholder => "Title contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :rule_6_cont, "Rule 6 contains" %>
+    <%= f.text_field :rule_6_cont, :class => "form-control", :placeholder => "Rule 6 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :rule_5_cont, "Rule 5 contains" %>
+    <%= f.text_field :rule_5_cont, :class => "form-control", :placeholder => "Rule 5 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :rule_4_cont, "Rule 4 contains" %>
+    <%= f.text_field :rule_4_cont, :class => "form-control", :placeholder => "Rule 4 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :rule_3_cont, "Rule 3 contains" %>
+    <%= f.text_field :rule_3_cont, :class => "form-control", :placeholder => "Rule 3 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :rule_2_cont, "Rule 2 contains" %>
+    <%= f.text_field :rule_2_cont, :class => "form-control", :placeholder => "Rule 2 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :rule_1_cont, "Rule 1 contains" %>
+    <%= f.text_field :rule_1_cont, :class => "form-control", :placeholder => "Rule 1 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :amenity_8_cont, "Amenity 8 contains" %>
+    <%= f.text_field :amenity_8_cont, :class => "form-control", :placeholder => "Amenity 8 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :amenity_7_cont, "Amenity 7 contains" %>
+    <%= f.text_field :amenity_7_cont, :class => "form-control", :placeholder => "Amenity 7 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :amenity_6_cont, "Amenity 6 contains" %>
+    <%= f.text_field :amenity_6_cont, :class => "form-control", :placeholder => "Amenity 6 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :amenity_5_cont, "Amenity 5 contains" %>
+    <%= f.text_field :amenity_5_cont, :class => "form-control", :placeholder => "Amenity 5 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :amenity_4_cont, "Amenity 4 contains" %>
+    <%= f.text_field :amenity_4_cont, :class => "form-control", :placeholder => "Amenity 4 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :amenity_3_cont, "Amenity 3 contains" %>
+    <%= f.text_field :amenity_3_cont, :class => "form-control", :placeholder => "Amenity 3 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :amenity_2_cont, "Amenity 2 contains" %>
+    <%= f.text_field :amenity_2_cont, :class => "form-control", :placeholder => "Amenity 2 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :amenity_1_cont, "Amenity 1 contains" %>
+    <%= f.text_field :amenity_1_cont, :class => "form-control", :placeholder => "Amenity 1 contains" %>
+  </div>
+
+<div class="form-group">
+  <%= f.label :food_5_price, "Food 5 price" %>
+  <div class="row">
+    <div class='col-md-6 mb-1'>
+      <%= f.text_field :food_5_price_gteq, :class => "form-control", :placeholder => "Food 5 price greater than or equal to" %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.text_field :food_5_price_lteq, :class => "form-control", :placeholder => "Food 5 price less than or equal to" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :food_4_price, "Food 4 price" %>
+  <div class="row">
+    <div class='col-md-6 mb-1'>
+      <%= f.text_field :food_4_price_gteq, :class => "form-control", :placeholder => "Food 4 price greater than or equal to" %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.text_field :food_4_price_lteq, :class => "form-control", :placeholder => "Food 4 price less than or equal to" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :food_3_price, "Food 3 price" %>
+  <div class="row">
+    <div class='col-md-6 mb-1'>
+      <%= f.text_field :food_3_price_gteq, :class => "form-control", :placeholder => "Food 3 price greater than or equal to" %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.text_field :food_3_price_lteq, :class => "form-control", :placeholder => "Food 3 price less than or equal to" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :food_2_price, "Food 2 price" %>
+  <div class="row">
+    <div class='col-md-6 mb-1'>
+      <%= f.text_field :food_2_price_gteq, :class => "form-control", :placeholder => "Food 2 price greater than or equal to" %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.text_field :food_2_price_lteq, :class => "form-control", :placeholder => "Food 2 price less than or equal to" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :food_1_price, "Food 1 price" %>
+  <div class="row">
+    <div class='col-md-6 mb-1'>
+      <%= f.text_field :food_1_price_gteq, :class => "form-control", :placeholder => "Food 1 price greater than or equal to" %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.text_field :food_1_price_lteq, :class => "form-control", :placeholder => "Food 1 price less than or equal to" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :drink_5_price, "Drink 5 price" %>
+  <div class="row">
+    <div class='col-md-6 mb-1'>
+      <%= f.text_field :drink_5_price_gteq, :class => "form-control", :placeholder => "Drink 5 price greater than or equal to" %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.text_field :drink_5_price_lteq, :class => "form-control", :placeholder => "Drink 5 price less than or equal to" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :drink_4_price, "Drink 4 price" %>
+  <div class="row">
+    <div class='col-md-6 mb-1'>
+      <%= f.text_field :drink_4_price_gteq, :class => "form-control", :placeholder => "Drink 4 price greater than or equal to" %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.text_field :drink_4_price_lteq, :class => "form-control", :placeholder => "Drink 4 price less than or equal to" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :drink_3_price, "Drink 3 price" %>
+  <div class="row">
+    <div class='col-md-6 mb-1'>
+      <%= f.text_field :drink_3_price_gteq, :class => "form-control", :placeholder => "Drink 3 price greater than or equal to" %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.text_field :drink_3_price_lteq, :class => "form-control", :placeholder => "Drink 3 price less than or equal to" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :drink_2_price, "Drink 2 price" %>
+  <div class="row">
+    <div class='col-md-6 mb-1'>
+      <%= f.text_field :drink_2_price_gteq, :class => "form-control", :placeholder => "Drink 2 price greater than or equal to" %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.text_field :drink_2_price_lteq, :class => "form-control", :placeholder => "Drink 2 price less than or equal to" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :drink_1_price, "Drink 1 price" %>
+  <div class="row">
+    <div class='col-md-6 mb-1'>
+      <%= f.text_field :drink_1_price_gteq, :class => "form-control", :placeholder => "Drink 1 price greater than or equal to" %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.text_field :drink_1_price_lteq, :class => "form-control", :placeholder => "Drink 1 price less than or equal to" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+    <%= f.label :food_5_cont, "Food 5 contains" %>
+    <%= f.text_field :food_5_cont, :class => "form-control", :placeholder => "Food 5 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :food_4_cont, "Food 4 contains" %>
+    <%= f.text_field :food_4_cont, :class => "form-control", :placeholder => "Food 4 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :food_3_cont, "Food 3 contains" %>
+    <%= f.text_field :food_3_cont, :class => "form-control", :placeholder => "Food 3 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :food_2_cont, "Food 2 contains" %>
+    <%= f.text_field :food_2_cont, :class => "form-control", :placeholder => "Food 2 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :food_1_cont, "Food 1 contains" %>
+    <%= f.text_field :food_1_cont, :class => "form-control", :placeholder => "Food 1 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :drink_5_cont, "Drink 5 contains" %>
+    <%= f.text_field :drink_5_cont, :class => "form-control", :placeholder => "Drink 5 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :drink_4_cont, "Drink 4 contains" %>
+    <%= f.text_field :drink_4_cont, :class => "form-control", :placeholder => "Drink 4 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :drink_3_cont, "Drink 3 contains" %>
+    <%= f.text_field :drink_3_cont, :class => "form-control", :placeholder => "Drink 3 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :drink_2_cont, "Drink 2 contains" %>
+    <%= f.text_field :drink_2_cont, :class => "form-control", :placeholder => "Drink 2 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :drink_1_cont, "Drink 1 contains" %>
+    <%= f.text_field :drink_1_cont, :class => "form-control", :placeholder => "Drink 1 contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :description_cont, "Description contains" %>
+    <%= f.text_field :description_cont, :class => "form-control", :placeholder => "Description contains" %>
+  </div>
+
+<div class="form-group">
+  <%= f.label :capacity, "Capacity" %>
+  <div class="row">
+    <div class='col-md-6 mb-1'>
+      <%= f.text_field :capacity_gteq, :class => "form-control", :placeholder => "Capacity greater than or equal to" %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.text_field :capacity_lteq, :class => "form-control", :placeholder => "Capacity less than or equal to" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+    <%= f.label :website_cont, "Website contains" %>
+    <%= f.text_field :website_cont, :class => "form-control", :placeholder => "Website contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :zip_cont, "Zip contains" %>
+    <%= f.text_field :zip_cont, :class => "form-control", :placeholder => "Zip contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :state_cont, "State contains" %>
+    <%= f.text_field :state_cont, :class => "form-control", :placeholder => "State contains" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :city_cont, "City contains" %>
+    <%= f.text_field :city_cont, :class => "form-control", :placeholder => "City contains" %>
+  </div>
+
+<div class="form-group">
+          <%= f.label :created_at, "Created at" %>
+          <div class="row">
+            <div class='col-md-6 mb-1'>
+              <div class='input-group date' id='created_atgteqPicker'>
+                  <%= f.text_field :created_at_gteq, :class => "form-control", :placeholder => "Created at greater than or equal to" %>
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+            </div>
+
+            <div class='col-md-6'>
+              <div class='input-group date' id='created_atlteqPicker'>
+                  <%= f.text_field :created_at_lteq, :class => "form-control", :placeholder => "Created at less than or equal to" %>
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+            </div>
+          </div>
+      </div>
+      <script type="text/javascript">
+          $(function () {
+              $('#created_atgteqPicker').datetimepicker({
+                  format: 'YYYY-MM-DD hh:mm:SS'
+              });
+              $('#created_atlteqPicker').datetimepicker({
+                  useCurrent: false,
+                  format: 'YYYY-MM-DD hh:mm:SS'
+              });
+              $('#created_atgteqPicker').on("dp.change", function (e) {
+                  $('#created_atlteqPicker').data("DateTimePicker").minDate(e.date);
+              });
+              $('#created_atlteqPicker').on("dp.change", function (e) {
+                  $('#created_atgteqPicker').data("DateTimePicker").maxDate(e.date);
+              });
+          });
+      </script>
+
+        <div class="form-group">
+      <%= f.label :coordinator_name_cont, "Coordinator name contains" %>
+      <%= f.text_field :coordinator_name_cont, :class => "form-control", :placeholder => "Coordinator name contains" %>
+    </div>
+
+      <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
+
+      <a href="/venues" class="btn btn-default btn-block mb-1">Clear filters</a>
+    <% end %>
+    <a class="btn btn-default btn-block mb-1" data-toggle="collapse" href="#venues_filters">
+      Show Filters
+    </a>
+  </div>
 </div>
 
 <div class="row">
