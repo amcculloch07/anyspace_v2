@@ -1,0 +1,151 @@
+<div class="page-header">
+  <h3>Venue #<%= @venue.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Address</dt>
+      <dd><%= @venue.address %></dd>
+
+      <dt>City</dt>
+      <dd><%= @venue.city %></dd>
+
+      <dt>State</dt>
+      <dd><%= @venue.state %></dd>
+
+      <dt>Zip</dt>
+      <dd><%= @venue.zip %></dd>
+
+      <dt>Website</dt>
+      <dd><%= @venue.website %></dd>
+
+      <dt>Capacity</dt>
+      <dd><%= @venue.capacity %></dd>
+
+      <dt>Description</dt>
+      <dd><%= @venue.description %></dd>
+
+      <dt>Drink 1</dt>
+      <dd><%= @venue.drink_1 %></dd>
+
+      <dt>Drink 2</dt>
+      <dd><%= @venue.drink_2 %></dd>
+
+      <dt>Drink 3</dt>
+      <dd><%= @venue.drink_3 %></dd>
+
+      <dt>Drink 4</dt>
+      <dd><%= @venue.drink_4 %></dd>
+
+      <dt>Drink 5</dt>
+      <dd><%= @venue.drink_5 %></dd>
+
+      <dt>Food 1</dt>
+      <dd><%= @venue.food_1 %></dd>
+
+      <dt>Food 2</dt>
+      <dd><%= @venue.food_2 %></dd>
+
+      <dt>Food 3</dt>
+      <dd><%= @venue.food_3 %></dd>
+
+      <dt>Food 4</dt>
+      <dd><%= @venue.food_4 %></dd>
+
+      <dt>Food 5</dt>
+      <dd><%= @venue.food_5 %></dd>
+
+      <dt>Drink 1 price</dt>
+      <dd><%= @venue.drink_1_price %></dd>
+
+      <dt>Drink 2 price</dt>
+      <dd><%= @venue.drink_2_price %></dd>
+
+      <dt>Drink 3 price</dt>
+      <dd><%= @venue.drink_3_price %></dd>
+
+      <dt>Drink 4 price</dt>
+      <dd><%= @venue.drink_4_price %></dd>
+
+      <dt>Drink 5 price</dt>
+      <dd><%= @venue.drink_5_price %></dd>
+
+      <dt>Food 1 price</dt>
+      <dd><%= @venue.food_1_price %></dd>
+
+      <dt>Food 2 price</dt>
+      <dd><%= @venue.food_2_price %></dd>
+
+      <dt>Food 3 price</dt>
+      <dd><%= @venue.food_3_price %></dd>
+
+      <dt>Food 4 price</dt>
+      <dd><%= @venue.food_4_price %></dd>
+
+      <dt>Food 5 price</dt>
+      <dd><%= @venue.food_5_price %></dd>
+
+      <dt>Amenity 1</dt>
+      <dd><%= @venue.amenity_1 %></dd>
+
+      <dt>Amenity 2</dt>
+      <dd><%= @venue.amenity_2 %></dd>
+
+      <dt>Amenity 3</dt>
+      <dd><%= @venue.amenity_3 %></dd>
+
+      <dt>Amenity 4</dt>
+      <dd><%= @venue.amenity_4 %></dd>
+
+      <dt>Amenity 5</dt>
+      <dd><%= @venue.amenity_5 %></dd>
+
+      <dt>Amenity 6</dt>
+      <dd><%= @venue.amenity_6 %></dd>
+
+      <dt>Amenity 7</dt>
+      <dd><%= @venue.amenity_7 %></dd>
+
+      <dt>Amenity 8</dt>
+      <dd><%= @venue.amenity_8 %></dd>
+
+      <dt>Rule 1</dt>
+      <dd><%= @venue.rule_1 %></dd>
+
+      <dt>Rule 2</dt>
+      <dd><%= @venue.rule_2 %></dd>
+
+      <dt>Rule 3</dt>
+      <dd><%= @venue.rule_3 %></dd>
+
+      <dt>Rule 4</dt>
+      <dd><%= @venue.rule_4 %></dd>
+
+      <dt>Rule 5</dt>
+      <dd><%= @venue.rule_5 %></dd>
+
+      <dt>Rule 6</dt>
+      <dd><%= @venue.rule_6 %></dd>
+
+      <dt>Coordinator</dt>
+      <dd><%= @venue.coordinator_id %></dd>
+
+      <dt>Title</dt>
+      <dd><%= @venue.title %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/venues" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/venues/<%= @venue.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_venue/<%= @venue.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

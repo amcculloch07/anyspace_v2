@@ -1,0 +1,415 @@
+<!-- Validation failure messages -->
+<% if @venue.errors.any? %>
+  <% @venue.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Venue #<%= @venue.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_venue/<%= @venue.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for address -->
+      <div class="form-group">
+        <label for="address" class="control-label">
+          Address
+        </label>
+
+        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @venue.address %>">
+      </div>
+
+      <!-- Label and input for city -->
+      <div class="form-group">
+        <label for="city" class="control-label">
+          City
+        </label>
+
+        <input type="text" id="city" name="city" placeholder="City" class="form-control" value="<%= @venue.city %>">
+      </div>
+
+      <!-- Label and input for state -->
+      <div class="form-group">
+        <label for="state" class="control-label">
+          State
+        </label>
+
+        <input type="text" id="state" name="state" placeholder="State" class="form-control" value="<%= @venue.state %>">
+      </div>
+
+      <!-- Label and input for zip -->
+      <div class="form-group">
+        <label for="zip" class="control-label">
+          Zip
+        </label>
+
+        <input type="text" id="zip" name="zip" placeholder="Zip" class="form-control" value="<%= @venue.zip %>">
+      </div>
+
+      <!-- Label and input for website -->
+      <div class="form-group">
+        <label for="website" class="control-label">
+          Website
+        </label>
+
+        <input type="text" id="website" name="website" placeholder="Website" class="form-control" value="<%= @venue.website %>">
+      </div>
+
+      <!-- Label and input for capacity -->
+      <div class="form-group">
+        <label for="capacity" class="control-label">
+          Capacity
+        </label>
+
+        <input type="text" id="capacity" name="capacity" placeholder="Capacity" class="form-control" value="<%= @venue.capacity %>">
+      </div>
+
+      <!-- Label and input for description -->
+      <div class="form-group">
+        <label for="description" class="control-label">
+          Description
+        </label>
+
+        <input type="text" id="description" name="description" placeholder="Description" class="form-control" value="<%= @venue.description %>">
+      </div>
+
+      <!-- Label and input for drink_1 -->
+      <div class="form-group">
+        <label for="drink_1" class="control-label">
+          Drink 1
+        </label>
+
+        <input type="text" id="drink_1" name="drink_1" placeholder="Drink 1" class="form-control" value="<%= @venue.drink_1 %>">
+      </div>
+
+      <!-- Label and input for drink_2 -->
+      <div class="form-group">
+        <label for="drink_2" class="control-label">
+          Drink 2
+        </label>
+
+        <input type="text" id="drink_2" name="drink_2" placeholder="Drink 2" class="form-control" value="<%= @venue.drink_2 %>">
+      </div>
+
+      <!-- Label and input for drink_3 -->
+      <div class="form-group">
+        <label for="drink_3" class="control-label">
+          Drink 3
+        </label>
+
+        <input type="text" id="drink_3" name="drink_3" placeholder="Drink 3" class="form-control" value="<%= @venue.drink_3 %>">
+      </div>
+
+      <!-- Label and input for drink_4 -->
+      <div class="form-group">
+        <label for="drink_4" class="control-label">
+          Drink 4
+        </label>
+
+        <input type="text" id="drink_4" name="drink_4" placeholder="Drink 4" class="form-control" value="<%= @venue.drink_4 %>">
+      </div>
+
+      <!-- Label and input for drink_5 -->
+      <div class="form-group">
+        <label for="drink_5" class="control-label">
+          Drink 5
+        </label>
+
+        <input type="text" id="drink_5" name="drink_5" placeholder="Drink 5" class="form-control" value="<%= @venue.drink_5 %>">
+      </div>
+
+      <!-- Label and input for food_1 -->
+      <div class="form-group">
+        <label for="food_1" class="control-label">
+          Food 1
+        </label>
+
+        <input type="text" id="food_1" name="food_1" placeholder="Food 1" class="form-control" value="<%= @venue.food_1 %>">
+      </div>
+
+      <!-- Label and input for food_2 -->
+      <div class="form-group">
+        <label for="food_2" class="control-label">
+          Food 2
+        </label>
+
+        <input type="text" id="food_2" name="food_2" placeholder="Food 2" class="form-control" value="<%= @venue.food_2 %>">
+      </div>
+
+      <!-- Label and input for food_3 -->
+      <div class="form-group">
+        <label for="food_3" class="control-label">
+          Food 3
+        </label>
+
+        <input type="text" id="food_3" name="food_3" placeholder="Food 3" class="form-control" value="<%= @venue.food_3 %>">
+      </div>
+
+      <!-- Label and input for food_4 -->
+      <div class="form-group">
+        <label for="food_4" class="control-label">
+          Food 4
+        </label>
+
+        <input type="text" id="food_4" name="food_4" placeholder="Food 4" class="form-control" value="<%= @venue.food_4 %>">
+      </div>
+
+      <!-- Label and input for food_5 -->
+      <div class="form-group">
+        <label for="food_5" class="control-label">
+          Food 5
+        </label>
+
+        <input type="text" id="food_5" name="food_5" placeholder="Food 5" class="form-control" value="<%= @venue.food_5 %>">
+      </div>
+
+      <!-- Label and input for drink_1_price -->
+      <div class="form-group">
+        <label for="drink_1_price" class="control-label">
+          Drink 1 price
+        </label>
+
+        <input type="text" id="drink_1_price" name="drink_1_price" placeholder="Drink 1 price" class="form-control" value="<%= @venue.drink_1_price %>">
+      </div>
+
+      <!-- Label and input for drink_2_price -->
+      <div class="form-group">
+        <label for="drink_2_price" class="control-label">
+          Drink 2 price
+        </label>
+
+        <input type="text" id="drink_2_price" name="drink_2_price" placeholder="Drink 2 price" class="form-control" value="<%= @venue.drink_2_price %>">
+      </div>
+
+      <!-- Label and input for drink_3_price -->
+      <div class="form-group">
+        <label for="drink_3_price" class="control-label">
+          Drink 3 price
+        </label>
+
+        <input type="text" id="drink_3_price" name="drink_3_price" placeholder="Drink 3 price" class="form-control" value="<%= @venue.drink_3_price %>">
+      </div>
+
+      <!-- Label and input for drink_4_price -->
+      <div class="form-group">
+        <label for="drink_4_price" class="control-label">
+          Drink 4 price
+        </label>
+
+        <input type="text" id="drink_4_price" name="drink_4_price" placeholder="Drink 4 price" class="form-control" value="<%= @venue.drink_4_price %>">
+      </div>
+
+      <!-- Label and input for drink_5_price -->
+      <div class="form-group">
+        <label for="drink_5_price" class="control-label">
+          Drink 5 price
+        </label>
+
+        <input type="text" id="drink_5_price" name="drink_5_price" placeholder="Drink 5 price" class="form-control" value="<%= @venue.drink_5_price %>">
+      </div>
+
+      <!-- Label and input for food_1_price -->
+      <div class="form-group">
+        <label for="food_1_price" class="control-label">
+          Food 1 price
+        </label>
+
+        <input type="text" id="food_1_price" name="food_1_price" placeholder="Food 1 price" class="form-control" value="<%= @venue.food_1_price %>">
+      </div>
+
+      <!-- Label and input for food_2_price -->
+      <div class="form-group">
+        <label for="food_2_price" class="control-label">
+          Food 2 price
+        </label>
+
+        <input type="text" id="food_2_price" name="food_2_price" placeholder="Food 2 price" class="form-control" value="<%= @venue.food_2_price %>">
+      </div>
+
+      <!-- Label and input for food_3_price -->
+      <div class="form-group">
+        <label for="food_3_price" class="control-label">
+          Food 3 price
+        </label>
+
+        <input type="text" id="food_3_price" name="food_3_price" placeholder="Food 3 price" class="form-control" value="<%= @venue.food_3_price %>">
+      </div>
+
+      <!-- Label and input for food_4_price -->
+      <div class="form-group">
+        <label for="food_4_price" class="control-label">
+          Food 4 price
+        </label>
+
+        <input type="text" id="food_4_price" name="food_4_price" placeholder="Food 4 price" class="form-control" value="<%= @venue.food_4_price %>">
+      </div>
+
+      <!-- Label and input for food_5_price -->
+      <div class="form-group">
+        <label for="food_5_price" class="control-label">
+          Food 5 price
+        </label>
+
+        <input type="text" id="food_5_price" name="food_5_price" placeholder="Food 5 price" class="form-control" value="<%= @venue.food_5_price %>">
+      </div>
+
+      <!-- Label and input for amenity_1 -->
+      <div class="form-group">
+        <label for="amenity_1" class="control-label">
+          Amenity 1
+        </label>
+
+        <input type="text" id="amenity_1" name="amenity_1" placeholder="Amenity 1" class="form-control" value="<%= @venue.amenity_1 %>">
+      </div>
+
+      <!-- Label and input for amenity_2 -->
+      <div class="form-group">
+        <label for="amenity_2" class="control-label">
+          Amenity 2
+        </label>
+
+        <input type="text" id="amenity_2" name="amenity_2" placeholder="Amenity 2" class="form-control" value="<%= @venue.amenity_2 %>">
+      </div>
+
+      <!-- Label and input for amenity_3 -->
+      <div class="form-group">
+        <label for="amenity_3" class="control-label">
+          Amenity 3
+        </label>
+
+        <input type="text" id="amenity_3" name="amenity_3" placeholder="Amenity 3" class="form-control" value="<%= @venue.amenity_3 %>">
+      </div>
+
+      <!-- Label and input for amenity_4 -->
+      <div class="form-group">
+        <label for="amenity_4" class="control-label">
+          Amenity 4
+        </label>
+
+        <input type="text" id="amenity_4" name="amenity_4" placeholder="Amenity 4" class="form-control" value="<%= @venue.amenity_4 %>">
+      </div>
+
+      <!-- Label and input for amenity_5 -->
+      <div class="form-group">
+        <label for="amenity_5" class="control-label">
+          Amenity 5
+        </label>
+
+        <input type="text" id="amenity_5" name="amenity_5" placeholder="Amenity 5" class="form-control" value="<%= @venue.amenity_5 %>">
+      </div>
+
+      <!-- Label and input for amenity_6 -->
+      <div class="form-group">
+        <label for="amenity_6" class="control-label">
+          Amenity 6
+        </label>
+
+        <input type="text" id="amenity_6" name="amenity_6" placeholder="Amenity 6" class="form-control" value="<%= @venue.amenity_6 %>">
+      </div>
+
+      <!-- Label and input for amenity_7 -->
+      <div class="form-group">
+        <label for="amenity_7" class="control-label">
+          Amenity 7
+        </label>
+
+        <input type="text" id="amenity_7" name="amenity_7" placeholder="Amenity 7" class="form-control" value="<%= @venue.amenity_7 %>">
+      </div>
+
+      <!-- Label and input for amenity_8 -->
+      <div class="form-group">
+        <label for="amenity_8" class="control-label">
+          Amenity 8
+        </label>
+
+        <input type="text" id="amenity_8" name="amenity_8" placeholder="Amenity 8" class="form-control" value="<%= @venue.amenity_8 %>">
+      </div>
+
+      <!-- Label and input for rule_1 -->
+      <div class="form-group">
+        <label for="rule_1" class="control-label">
+          Rule 1
+        </label>
+
+        <input type="text" id="rule_1" name="rule_1" placeholder="Rule 1" class="form-control" value="<%= @venue.rule_1 %>">
+      </div>
+
+      <!-- Label and input for rule_2 -->
+      <div class="form-group">
+        <label for="rule_2" class="control-label">
+          Rule 2
+        </label>
+
+        <input type="text" id="rule_2" name="rule_2" placeholder="Rule 2" class="form-control" value="<%= @venue.rule_2 %>">
+      </div>
+
+      <!-- Label and input for rule_3 -->
+      <div class="form-group">
+        <label for="rule_3" class="control-label">
+          Rule 3
+        </label>
+
+        <input type="text" id="rule_3" name="rule_3" placeholder="Rule 3" class="form-control" value="<%= @venue.rule_3 %>">
+      </div>
+
+      <!-- Label and input for rule_4 -->
+      <div class="form-group">
+        <label for="rule_4" class="control-label">
+          Rule 4
+        </label>
+
+        <input type="text" id="rule_4" name="rule_4" placeholder="Rule 4" class="form-control" value="<%= @venue.rule_4 %>">
+      </div>
+
+      <!-- Label and input for rule_5 -->
+      <div class="form-group">
+        <label for="rule_5" class="control-label">
+          Rule 5
+        </label>
+
+        <input type="text" id="rule_5" name="rule_5" placeholder="Rule 5" class="form-control" value="<%= @venue.rule_5 %>">
+      </div>
+
+      <!-- Label and input for rule_6 -->
+      <div class="form-group">
+        <label for="rule_6" class="control-label">
+          Rule 6
+        </label>
+
+        <input type="text" id="rule_6" name="rule_6" placeholder="Rule 6" class="form-control" value="<%= @venue.rule_6 %>">
+      </div>
+
+      <!-- Label and input for coordinator_id -->
+      <div class="form-group">
+        <label for="coordinator_id" class="control-label">
+          Coordinator
+        </label>
+
+        <input type="text" id="coordinator_id" name="coordinator_id" placeholder="Coordinator" class="form-control" value="<%= @venue.coordinator_id %>">
+      </div>
+
+      <!-- Label and input for title -->
+      <div class="form-group">
+        <label for="title" class="control-label">
+          Title
+        </label>
+
+        <input type="text" id="title" name="title" placeholder="Title" class="form-control" value="<%= @venue.title %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Venue
+      </button>
+      or
+      <a href="/venues/<%= @venue.id %>">Cancel</a>
+    </form>
+  </div>
+</div>
