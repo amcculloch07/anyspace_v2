@@ -405,13 +405,7 @@
         <td><%= venue.rule_4 %></td>
         <td><%= venue.rule_5 %></td>
         <td><%= venue.rule_6 %></td> -->
-        <td>
-          <% if venue.coordinator.present? %>
-            <a href="/coordinators/<%= venue.coordinator.id %>">
-              <%= venue.coordinator.name %>
-            </a>
-          <% end %>
-        </td>
+        
 
         <td>
           <!-- <a href="/venues/<%= venue.id %>" class="btn btn-primary">Show</a> -->

@@ -55,65 +55,39 @@
       <dt>Description</dt>
       <dd><%= @venue.description %></dd>
 
-      <dt>Drink 1</dt>
-      <dd><%= @venue.drink_1 %></dd>
+      <div class="row">
+        <div class="col-sm-1">
+        </div>
+          
+        <div class="col-sm-5">
+              <tr>
+                <th>Food Options</th>
+              </tr>
+              <ul>
+              <% if @venue.food_1.present? %>
+              <dd><%= @venue.food_1 %></dd>
+              <% end %>
+              </ul>
 
-      <dt>Drink 2</dt>
-      <dd><%= @venue.drink_2 %></dd>
 
-      <dt>Drink 3</dt>
-      <dd><%= @venue.drink_3 %></dd>
 
-      <dt>Drink 4</dt>
-      <dd><%= @venue.drink_4 %></dd>
 
-      <dt>Drink 5</dt>
-      <dd><%= @venue.drink_5 %></dd>
+          </div>
 
-      <dt>Food 1</dt>
-      <dd><%= @venue.food_1 %></dd>
+          <div class="col-sm-6">
+          <th>Drink Options</th>
+          <tr>
+              <ul>
+              <% if @venue.drink_1.present? %>
+              <%= @venue.drink_1 %>
+              <% end %>
+              </ul>
+          </tr>
 
-      <dt>Food 2</dt>
-      <dd><%= @venue.food_2 %></dd>
+</div>
 
-      <dt>Food 3</dt>
-      <dd><%= @venue.food_3 %></dd>
 
-      <dt>Food 4</dt>
-      <dd><%= @venue.food_4 %></dd>
 
-      <dt>Food 5</dt>
-      <dd><%= @venue.food_5 %></dd>
-
-      <dt>Drink 1 price</dt>
-      <dd><%= @venue.drink_1_price %></dd>
-
-      <dt>Drink 2 price</dt>
-      <dd><%= @venue.drink_2_price %></dd>
-
-      <dt>Drink 3 price</dt>
-      <dd><%= @venue.drink_3_price %></dd>
-
-      <dt>Drink 4 price</dt>
-      <dd><%= @venue.drink_4_price %></dd>
-
-      <dt>Drink 5 price</dt>
-      <dd><%= @venue.drink_5_price %></dd>
-
-      <dt>Food 1 price</dt>
-      <dd><%= @venue.food_1_price %></dd>
-
-      <dt>Food 2 price</dt>
-      <dd><%= @venue.food_2_price %></dd>
-
-      <dt>Food 3 price</dt>
-      <dd><%= @venue.food_3_price %></dd>
-
-      <dt>Food 4 price</dt>
-      <dd><%= @venue.food_4_price %></dd>
-
-      <dt>Food 5 price</dt>
-      <dd><%= @venue.food_5_price %></dd>
 
       <dt>Amenity 1</dt>
       <dd><%= @venue.amenity_1 %></dd>
