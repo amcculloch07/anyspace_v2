@@ -18,6 +18,15 @@
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
+      <!-- Label and input for title -->
+      <div class="form-group">
+        <label for="title" class="control-label">
+          Title
+        </label>
+
+        <input type="text" id="title" name="title" placeholder="Title" class="form-control" value="<%= @venue.title %>">
+      </div>
+
       <!-- Label and input for address -->
       <div class="form-group">
         <label for="address" class="control-label">
@@ -396,14 +405,7 @@
         <%= select_tag(:coordinator_id, options_from_collection_for_select(Coordinator.all, :id, :name, @venue.coordinator_id), :class => "form-control") %>
       </div>
 
-      <!-- Label and input for title -->
-      <div class="form-group">
-        <label for="title" class="control-label">
-          Title
-        </label>
 
-        <input type="text" id="title" name="title" placeholder="Title" class="form-control" value="<%= @venue.title %>">
-      </div>
 
       <button class="btn btn-success">
         Create Venue

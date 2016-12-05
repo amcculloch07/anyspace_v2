@@ -1,24 +1,53 @@
 <div class="page-header">
-  <h3>Venue #<%= @venue.id %></h3>
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+          <h1>
+            <a href="<%= @venue.website %>">
+              <%= @venue.title %>
+            </a>
+          </h1>
+          <h4><%= @venue.address %>, <%= @venue.city %>, <%= @venue.state %>, <%= @venue.zip %></h4>
+        </div>
+
+
+    </div>
+  </div>
+  </div>
+
+<!-- Row with pictures and map -->
+<div class="row">
+
+<!-- Picture Carousel -->
+  <div class="col-lg-8">
+
+
+  </div>
+
+  <!-- Google Map -->
+  <div class="col-lg-4">
+  <iframe
+    width="400"
+    height="300"
+    frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA7LQxvUQoh4RY8Ns4hBZJyCHeHV7Ebpyc
+      &q=<%= @venue.address %>+<%= @venue.city %>+<%= @venue.state %>+<%= @venue.zip %>" allowfullscreen>
+  </iframe>
+  </div>
 </div>
 
 <div class="row">
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
-      <dt>Address</dt>
-      <dd><%= @venue.address %></dd>
 
-      <dt>City</dt>
-      <dd><%= @venue.city %></dd>
-
-      <dt>State</dt>
-      <dd><%= @venue.state %></dd>
-
-      <dt>Zip</dt>
-      <dd><%= @venue.zip %></dd>
-
-      <dt>Website</dt>
-      <dd><%= @venue.website %></dd>
+      <dt>Coordinator</dt>
+      <dd>
+        <% if @venue.coordinator.present? %>
+          <a href="/coordinators/<%= @venue.coordinator_id %>">
+            <%= @venue.coordinator.name %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Capacity</dt>
       <dd><%= @venue.capacity %></dd>
@@ -128,17 +157,9 @@
       <dt>Rule 6</dt>
       <dd><%= @venue.rule_6 %></dd>
 
-      <dt>Coordinator</dt>
-      <dd>
-        <% if @venue.coordinator.present? %>
-          <a href="/coordinators/<%= @venue.coordinator_id %>">
-            <%= @venue.coordinator.name %>
-          </a>
-        <% end %>
-      </dd>
 
-      <dt>Title</dt>
-      <dd><%= @venue.title %></dd>
+
+
 
     </dl>
 
