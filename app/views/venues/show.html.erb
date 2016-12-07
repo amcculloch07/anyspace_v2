@@ -56,80 +56,121 @@
       <dd><%= @venue.description %></dd>
 
       <div class="row">
-        <div class="col-sm-1">
-        </div>
+        <div class="col-md-5">
+              <dt>Food Options</dt>
 
-        <div class="col-sm-5">
-              <tr>
-                <th>Food Options</th>
-              </tr>
-              <ul>
-              <% if @venue.food_1.present? %>
-              <dd><%= @venue.food_1 %></dd>
-              <% end %>
-              </ul>
+                  <% if @venue.food_1.present? %> <dd><%= @venue.food_1 %>
+                      <%if @venue.food_1_price != 0 %>
+                      $<%=@venue.food_1_price%>
+                      <%end%>
+                      </dd>
+                  <% end %>
 
+                  <% if @venue.food_2.present? %> <dd><%= @venue.food_2 %>
+                      <%if @venue.food_2_price != 0 %>
+                      $<%=@venue.food_2_price%>
+                      <%end%>
+                      </dd>
+                  <% end %>
 
+                  <% if @venue.food_3.present? %> <dd><%= @venue.food_3 %>
+                      <%if @venue.food_3_price != 0 %>
+                      $<%=@venue.food_3_price%>
+                      <%end%>
+                      </dd>
+                  <% end %>
 
+                  <% if @venue.food_4.present? %> <dd><%= @venue.food_4 %>
+                      <%if @venue.food_4_price != 0 %>
+                      $<%=@venue.food_4_price%>
+                      <%end%>
+                      </dd>
+                  <% end %>
+
+                  <% if @venue.food_5.present? %> <dd><%= @venue.food_5 %>
+                      <%if @venue.food_5_price != 0 %>
+                      $<%=@venue.food_5_price%>
+                      <%end%>
+                      </dd>
+                  <% end %>
+          </div>
+          <div class="col-sm-1">
 
           </div>
 
-          <div class="col-sm-6">
-          <th>Drink Options</th>
-          <tr>
-              <ul>
-              <% if @venue.drink_1.present? %>
-              <%= @venue.drink_1 %>
-              <% end %>
-              </ul>
-          </tr>
 
-</div>
+          <div class="col-md-5">
+          <dt>Drink Options</dt>
+
+          <% if @venue.drink_1.present? %> <dd><%= @venue.drink_1 %>
+              <%if @venue.drink_1_price != 0 %>
+              $<%=@venue.drink_1_price%> Per Person
+              <%end%>
+              </dd>
+          <% end %>
+
+          <% if @venue.drink_2.present? %> <dd><%= @venue.drink_2 %>
+              <%if @venue.drink_2_price != 0 %>
+              $<%=@venue.drink_2_price%> Per Person
+              <%end%>
+              </dd>
+          <% end %>
+
+          <% if @venue.drink_3.present? %> <dd><%= @venue.drink_3 %>
+              <%if @venue.drink_3_price != 0 %>
+              $<%=@venue.drink_3_price%> Per Person
+              <%end%>
+              </dd>
+          <% end %>
+
+          <% if @venue.drink_4.present? %> <dd><%= @venue.drink_4 %>
+              <%if @venue.drink_4_price != 0 %>
+              $<%=@venue.drink_4_price%> Per Person
+              <%end%>
+              </dd>
+          <% end %>
+
+          <% if @venue.drink_1.present? %> <dd><%= @venue.drink_1 %>
+              <%if @venue.drink_1_price != 0 %>
+              $<%=@venue.drink_1_price%> Per Person
+              <%end%>
+              </dd>
+          <% end %>
+          </div>
+        <div class="col-sm-1">
+          <dd>$<%=@venue.drink_1_price%> Per Person</dd>
+          <dd>$<%=@venue.drink_2_price%> Per Person</dd>
+        </div>
+      </div>
+
+    <div class="row">
+        <div class="col-md-6">
+          <dt>Amenities</dt>
+          <dd><%= @venue.amenity_1 %></dd>
+          <dd><%= @venue.amenity_2 %></dd>
+          <dd><%= @venue.amenity_3 %></dd>
+          <dd><%= @venue.amenity_4 %></dd>
+          <dd><%= @venue.amenity_5 %></dd>
+          <dd><%= @venue.amenity_6 %></dd>
+          <dd><%= @venue.amenity_7 %></dd>
+          <dd><%= @venue.amenity_8 %></dd>
+        </div>
+
+        <div class="col-md-6">
+        <dt>Rules</dt>
+        <dd><%= @venue.rule_1 %></dd>
+        <dd><%= @venue.rule_2 %></dd>
+        <dd><%= @venue.rule_3 %></dd>
+        <dd><%= @venue.rule_4 %></dd>
+        <dd><%= @venue.rule_5 %></dd>
+        <dd><%= @venue.rule_6 %></dd>
+        </div>
+  </div>
 
 
 
 
-      <dt>Amenity 1</dt>
-      <dd><%= @venue.amenity_1 %></dd>
 
-      <dt>Amenity 2</dt>
-      <dd><%= @venue.amenity_2 %></dd>
-
-      <dt>Amenity 3</dt>
-      <dd><%= @venue.amenity_3 %></dd>
-
-      <dt>Amenity 4</dt>
-      <dd><%= @venue.amenity_4 %></dd>
-
-      <dt>Amenity 5</dt>
-      <dd><%= @venue.amenity_5 %></dd>
-
-      <dt>Amenity 6</dt>
-      <dd><%= @venue.amenity_6 %></dd>
-
-      <dt>Amenity 7</dt>
-      <dd><%= @venue.amenity_7 %></dd>
-
-      <dt>Amenity 8</dt>
-      <dd><%= @venue.amenity_8 %></dd>
-
-      <dt>Rule 1</dt>
-      <dd><%= @venue.rule_1 %></dd>
-
-      <dt>Rule 2</dt>
-      <dd><%= @venue.rule_2 %></dd>
-
-      <dt>Rule 3</dt>
-      <dd><%= @venue.rule_3 %></dd>
-
-      <dt>Rule 4</dt>
-      <dd><%= @venue.rule_4 %></dd>
-
-      <dt>Rule 5</dt>
-      <dd><%= @venue.rule_5 %></dd>
-
-      <dt>Rule 6</dt>
-      <dd><%= @venue.rule_6 %></dd>
 
 
 
