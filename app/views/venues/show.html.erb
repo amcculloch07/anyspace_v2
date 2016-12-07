@@ -22,6 +22,7 @@
   <div class="col-lg-8">
 
 
+
   </div>
 
   <!-- Google Map -->
@@ -130,9 +131,9 @@
               </dd>
           <% end %>
 
-          <% if @venue.drink_1.present? %> <dd><%= @venue.drink_1 %>
-              <%if @venue.drink_1_price != 0 %>
-              $<%=@venue.drink_1_price%> Per Person
+          <% if @venue.drink_5.present? %> <dd><%= @venue.drink_5 %>
+              <%if @venue.drink_5_price != 0 %>
+              $<%=@venue.drink_5_price%> Per Person
               <%end%>
               </dd>
           <% end %>
@@ -168,27 +169,9 @@
   </div>
 
 
-
-
-
-
-
-
-
-
     </dl>
 
-    <div class="btn-group btn-group-justified">
-      <a href="/venues" class="btn btn-primary">
-        <i class="fa fa-fw fa-backward"></i>
-      </a>
-      <a href="/venues/<%= @venue.id %>/edit" class="btn btn-warning">
-        <i class="fa fa-fw fa-edit"></i>
-      </a>
-      <a href="/delete_venue/<%= @venue.id %>" class="btn btn-danger" rel="nofollow">
-        <i class="fa fa-fw fa-trash"></i>
-      </a>
-    </div>
+
   </div>
 </div>
 
@@ -204,7 +187,7 @@
       <% @venue.ratings.each do |rating| %>
         <li class="list-group-item">
           <a href="/ratings/<%= rating.id %>">
-            <%= rating.venue_id %>
+            <%= rating.comment %>
           </a>
           <div class="btn-group btn-group-xs pull-right">
             <a href="/ratings/<%= rating.id %>" class="btn btn-primary">
@@ -228,11 +211,20 @@
       <!-- Label and input for venue_id -->
       <input type="hidden" name="venue_id" value="<%= @venue.id %>">
 
+      <!-- Label and input for comment -->
+      <div class="form-group">
+        <label for="comment" class="control-label">
+          Review
+        </label>
+
+        <input type="text" id="comment" name="comment" placeholder="Comments" class="form-control" value="">
+      </div>
+
       <!-- Label and input for user_id -->
       <input type="hidden" name="user_id" value="<%= current_user.id %>">
 
       <button class="btn btn-block btn-success">
-        Create Rating
+        Submit
       </button>
     </form>
       </li>
@@ -286,10 +278,19 @@
       </div>
 
       <button class="btn btn-block btn-success">
-        Create Photo
+        Post Photo
       </button>
     </form>
       </li>
     </ul>
   </div>
+
+
+  <div class="btn-group btn-group-justified">
+    <a href="/venues" class="btn btn-primary">
+      <i class="fa fa-fw fa-backward"></i>
+    </a>
+  </div>
+
+
 </div>

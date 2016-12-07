@@ -33,6 +33,7 @@ class RatingsController < ApplicationController
 
     @rating.venue_id = params[:venue_id]
     @rating.user_id = params[:user_id]
+    @rating.comment = params[:comment]
 
     save_status = @rating.save
 
@@ -61,6 +62,7 @@ class RatingsController < ApplicationController
 
     @rating.venue_id = params[:venue_id]
     @rating.user_id = params[:user_id]
+    @rating.comment = params[:comment]
 
     save_status = @rating.save
 
