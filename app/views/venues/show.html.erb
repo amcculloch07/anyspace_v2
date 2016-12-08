@@ -211,7 +211,7 @@
 </div>
 
 <!-- A Venue has many ratings -->
-<%if current_user.id == 1  %>
+
 <div class="row">
   <div class="col-md-12">
     <ul class="list-group">
@@ -224,6 +224,7 @@
           <a href="/ratings/<%= rating.id %>">
             <%= rating.comment %>
           </a>
+          <%if current_user.id == 1  %>
           <div class="btn-group btn-group-xs pull-right">
             <a href="/ratings/<%= rating.id %>" class="btn btn-primary">
               <i class="fa fa-search-plus"></i>
@@ -235,8 +236,9 @@
               <i class="fa fa-trash-o"></i>
             </a>
           </div>
+          <% end %>
         </li>
-      <% end %>
+
 
       <li class="list-group-item">
         <form action="/create_rating" method="post">
