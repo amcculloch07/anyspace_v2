@@ -1,3 +1,4 @@
+<% if current_user.id == 1  %>
 <div class="page-header">
   <h1>
     Photos
@@ -98,3 +99,6 @@
     <%= paginate @photos, theme: 'twitter-bootstrap-4' %>
   </div>
 </div>
+<% else %>
+      <h1>You are not authorized to upload Photos.</h1>
+<% end %>

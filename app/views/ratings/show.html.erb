@@ -9,7 +9,7 @@
       <dd>
         <% if @rating.venue.present? %>
           <a href="/venues/<%= @rating.venue_id %>">
-            <%= @rating.venue.address %>
+            <%= @rating.venue.title %>
           </a>
         <% end %>
       </dd>
@@ -19,6 +19,15 @@
         <% if @rating.user.present? %>
           <a href="/users/<%= @rating.user_id %>">
             <%= @rating.user.email %>
+          </a>
+        <% end %>
+      </dd>
+
+      <dt>Comment</dt>
+      <dd>
+        <% if @rating.user.present? %>
+          <a href="/users/<%= @rating.user_id %>">
+            <%= @rating.comment %>
           </a>
         <% end %>
       </dd>

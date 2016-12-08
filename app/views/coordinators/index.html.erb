@@ -1,7 +1,9 @@
 <div class="page-header">
   <h1>
     Coordinators
+    <% if current_user.id == 1 %>
     <a href="/coordinators/new" class="btn btn-lg btn-success">New Coordinator</a>
+    <% end %>
   </h1>
 </div><div class="row mb-1">
   <div class="col-md-12">

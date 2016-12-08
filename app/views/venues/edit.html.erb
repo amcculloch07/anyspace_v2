@@ -8,6 +8,7 @@
   <% end %>
 <% end %>
 
+<% if current_user.id == 1  %>
 <div class="page-header">
   <h3>Edit <%= @venue.title %></h3>
 </div>
@@ -366,3 +367,6 @@
   </form>
  </div>
 </div>
+<% else %>
+      <h1>You are not authorized to edit Venues.</h1>
+<% end %>

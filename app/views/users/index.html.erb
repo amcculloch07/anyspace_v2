@@ -1,3 +1,4 @@
+<% if current_user.id == 1  %>
 <div class="page-header">
   <h1>
     Users
@@ -27,3 +28,6 @@
     <%= paginate @users, theme: 'twitter-bootstrap-4' %>
   </div>
 </div>
+<% else %>
+      <h1>You are not authorized to view Users.</h1>
+<% end %>

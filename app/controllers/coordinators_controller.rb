@@ -1,4 +1,6 @@
 class CoordinatorsController < ApplicationController
+
+
   def index
     @q = Coordinator.ransack(params[:q])
     @coordinators = @q.result(:distinct => true).includes(:venues).page(params[:page]).per(10)

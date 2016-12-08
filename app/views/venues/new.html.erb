@@ -8,6 +8,7 @@
   <% end %>
 <% end %>
 
+<% if current_user.id == 1  %>
 <div class="page-header">
   <h3>Add Venue</h3>
 </div>
@@ -368,3 +369,6 @@
     </form>
   </div>
 </div>
+<% else %>
+      <h1>You are not authorized to create new Venues.</h1>
+<% end %>

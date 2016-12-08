@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root :to => "venues#index"
+
   # Routes for the Coordinator resource:
   # CREATE
-  get "/coordinators/new", :controller => "coordinators", :action => "new"
+    get "/coordinators/new", :controller => "coordinators", :action => "new"
   post "/create_coordinator", :controller => "coordinators", :action => "create"
 
   # READ
