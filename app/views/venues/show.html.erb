@@ -238,6 +238,7 @@
           </div>
           <% end %>
         </li>
+      <% end %>
 
 
       <li class="list-group-item">
@@ -270,7 +271,7 @@
 </div>
 
 <!-- A Venue has many photos -->
-
+<%if current_user.id == 1  %>
 <div class="row">
   <div class="col-md-12">
     <ul class="list-group">
@@ -297,6 +298,7 @@
         </li>
       <% end %>
 
+
       <li class="list-group-item">
         <form action="/create_photo" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
@@ -322,6 +324,7 @@
     </ul>
   </div>
 <%end%>
+
 
   <div class="btn-group btn-group-justified">
       <a href="/venues" class="btn btn-primary">
