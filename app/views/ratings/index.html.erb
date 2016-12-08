@@ -79,10 +79,11 @@
 
       <% @ratings.each do |rating| %>
       <tr>
+        <% if current_user == rating.user %>
         <td>
           <% if rating.venue.present? %>
             <a href="/venues/<%= rating.venue.id %>">
-              <%= rating.venue.address %>
+              <%= rating.venue.title %>
             </a>
           <% end %>
         </td>
@@ -95,12 +96,10 @@
         </td>
         <td>
           <a href="/ratings/<%= rating.id %>" class="btn btn-primary">Show</a>
-          
-          <% if current_user == rating.user %>
-            <a href="/ratings/<%= rating.id %>/edit" class="btn btn-warning">Edit</a>
-            <a href="/delete_rating/<%= rating.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
-          <% end %>
+          <a href="/ratings/<%= rating.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_rating/<%= rating.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
         </td>
+        <% end %>
       </tr>
       <% end %>
     </table>
