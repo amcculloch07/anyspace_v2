@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h3>Photo #<%= @photo.id %></h3>
+  <h3><%= @photo.venue.title %> Photo </h3>
 </div>
 
 <div class="row">
@@ -9,13 +9,13 @@
       <dd>
         <% if @photo.venue.present? %>
           <a href="/venues/<%= @photo.venue_id %>">
-            <%= @photo.venue.address %>
+            <%= @photo.venue.title %>
           </a>
         <% end %>
       </dd>
 
-      <dt>Image url</dt>
-      <dd><%= @photo.image_url %></dd>
+      <dt>Image</dt>
+      <dd><img src="<%= @photo.image_url %>" width=400></dd>
 
     </dl>
 
