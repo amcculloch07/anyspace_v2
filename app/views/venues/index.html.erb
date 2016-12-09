@@ -114,18 +114,23 @@
       <% @venues.each do |venue| %>
         <tr>
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
+              <% venue.photos.each do |photo| %>
+              <img src="<%= photo.image_url %>" width=250>
+              <%end%>
+
+            </div>
+
+            <div class="col-sm-9">
               <h3>
                 <a href="/venues/<%= venue.id %>"><%= venue.title %>  </a>
               </h3>
               <h6><%= venue.address %>, <%= venue.city %>, <%= venue.state %>, <%= venue.zip %></h6>
-            </div>
-            <div class="col-sm-1"></div>
-            <div class="col-sm-7">
             <h5><%= venue.description %></h5>
             </div>
           </div>
         </tr>
+        <hr>
       <% end %>
     </table>
     <%= paginate @venues, theme: 'twitter-bootstrap-4' %>
