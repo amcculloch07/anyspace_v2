@@ -92,7 +92,7 @@
 
       <% @coordinators.each do |coordinator| %>
       <tr>
-        <td><%= coordinator.name %></td>
+        <td><a href="/coordinators/<%= coordinator.id %>"><%= coordinator.name %></a></td>
         <td><%= coordinator.email_address %></td>
         <td><%= coordinator.phone_number %></td>
         <td>

@@ -62,12 +62,14 @@
       <a href="/coordinators" class="btn btn-primary">
         Back
       </a>
-      <!-- <a href="/coordinators/<%= @coordinator.id %>/edit" class="btn btn-warning">
+      <% if current_user.id == 1  %>
+      <a href="/coordinators/<%= @coordinator.id %>/edit" class="btn btn-warning">
         Edit
       </a>
       <a href="/delete_coordinator/<%= @coordinator.id %>" class="btn btn-danger" rel="nofollow">
-        Delete -->
+        Delete
       </a>
+      <% end %>
     </div>
 
   </div>

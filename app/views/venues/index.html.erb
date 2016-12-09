@@ -110,23 +110,21 @@
 <div class="row">
   <div class="col-md-12">
     <table class="table table-striped table-hover">
-      <tr>
-        <th>Image</th>
-        <th>Title</th>
-        <th>Description</th>
-      </tr>
-
       <% @venues.each do |venue| %>
-      <tr>
-
-        <td><a href="/venues/<%= venue.id %>"><%= venue.title %></a></td>
-        <td><a href="/venues/<%= venue.id %>"><%= venue.title %></a>
-        <%= venue.address %>, <%= venue.city %>, <%= venue.state %>, <%= venue.zip %>
-        </td>
-
-        <td><%= venue.description %></td>
-
-      </tr>
+        <tr>
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>
+                <a href="/venues/<%= venue.id %>"><%= venue.title %>  </a>
+              </h3>
+              <h6><%= venue.address %>, <%= venue.city %>, <%= venue.state %>, <%= venue.zip %></h6>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-7">
+            <h5><%= venue.description %></h5>
+            </div>
+          </div>
+        </tr>
       <% end %>
     </table>
     <%= paginate @venues, theme: 'twitter-bootstrap-4' %>

@@ -2,7 +2,8 @@ class VenuesController < ApplicationController
   def index
     @q = Venue.ransack(params[:q])
     @venues = @q.result(:distinct => true).includes(:ratings, :photos, :coordinator).page(params[:page]).per(10)
-
+    @photo = Photo.new
+    
     render("venues/index.html.erb")
   end
 
