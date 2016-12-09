@@ -94,93 +94,97 @@
       <dd><%= @venue.capacity %></dd>
 
 <hr>
-
+      <%if @venue.food_1.present? %>
       <div class="row">
         <div class="col-md-12">
               <table class="table table-striped">
               <tr>
                 <th>Food Options</th>
-                <th>Price/Person</th>
-              </tr>
-              <tr>
-              <td><%if @venue.food_1.present? %><%= @venue.food_1 %></td>
-              <td><%if @venue.food_1_price != 0 %><%=@venue.food_1_price%>
-                  <%end%></td>
-                  <%end%>
+                <%if @venue.food_1_price.present? %><th>Price/Person</th>
+                <% end %>
               </tr>
 
-              <tr>
-              <td><%if @venue.food_2.present? %><%= @venue.food_2 %></td>
-              <td><%if @venue.food_2_price != 0 %><%=@venue.food_2_price%>
+              <%if @venue.food_1.present? %><tr>
+              <td><%= @venue.food_1 %></td>
+              <td><%if @venue.food_1_price != nil %><%=@venue.food_1_price%>
                   <%end%></td>
-                  <%end%>
-              </tr>
+              </tr><%end%>
 
-              <tr>
-              <td><%if @venue.food_3.present? %><%= @venue.food_3 %></td>
-              <td><%if @venue.food_3_price != 0 %><%=@venue.food_3_price%>
+              <%if @venue.food_2.present? %><tr>
+              <td><%= @venue.food_2 %></td>
+              <td><%if @venue.food_2_price != nil %><%=@venue.food_2_price%>
                   <%end%></td>
-                  <%end%>
-              </tr>
+              </tr><%end%>
 
-              <tr>
-              <td><%if @venue.food_4.present? %><%= @venue.food_4 %></td>
-              <td><%if @venue.food_4_price != 0 %><%=@venue.food_4_price%>
+              <%if @venue.food_3.present? %><tr>
+              <td><%= @venue.food_3 %></td>
+              <td><%if @venue.food_3_price != nil %><%=@venue.food_3_price%>
                   <%end%></td>
-                  <%end%>
-              </tr>
+              </tr><%end%>
 
-              <tr>
-              <td><%if @venue.food_5.present? %><%= @venue.food_5 %></td>
-              <td><%if @venue.food_5_price != 0 %><%=@venue.food_5_price%>
+              <%if @venue.food_4.present? %><tr>
+              <td><%= @venue.food_4 %></td>
+              <td><%if @venue.food_4_price != nil %><%=@venue.food_4_price%>
                   <%end%></td>
-                  <%end%>
-              </tr>
+              </tr><%end%>
+
+              <%if @venue.food_5.present? %><tr>
+              <td><%= @venue.food_5 %></td>
+              <td><%if @venue.food_5_price != nil %><%=@venue.food_5_price%>
+                  <%end%></td>
+              </tr><%end%>
 
             </table>
           </div>
+        </div>
+        <% end %>
 
 <hr>
 
-          <div class="col-md-5">
-          <dt>Drink Options</dt>
-
-          <% if @venue.drink_1.present? %> <dd><%= @venue.drink_1 %>
-              <%if @venue.drink_1_price != 0 %>
-              $<%=@venue.drink_1_price%> PP
-              <%end%>
-              </dd>
+<%if @venue.drink_1.present? %>
+<div class="row">
+  <div class="col-md-12">
+        <table class="table table-striped">
+        <tr>
+          <th>Drink Options</th>
+          <%if @venue.drink_1_price.present? %><th>Price/Person</th>
           <% end %>
+        </tr>
 
-          <% if @venue.drink_2.present? %> <dd><%= @venue.drink_2 %>
-              <%if @venue.drink_2_price != 0 %>
-              $<%=@venue.drink_2_price%> PP
-              <%end%>
-              </dd>
-          <% end %>
+        <%if @venue.drink_1.present? %><tr>
+        <td><%= @venue.drink_1 %></td>
+        <td><%if @venue.drink_1_price != nil %><%=@venue.drink_1_price%>
+            <%end%></td>
+        </tr><%end%>
 
-          <% if @venue.drink_3.present? %> <dd><%= @venue.drink_3 %>
-              <%if @venue.drink_3_price != 0 %>
-              $<%=@venue.drink_3_price%> PP
-              <%end%>
-              </dd>
-          <% end %>
+        <%if @venue.drink_2.present? %><tr>
+        <td><%= @venue.drink_2 %></td>
+        <td><%if @venue.drink_2_price != nil %><%=@venue.drink_2_price%>
+            <%end%></td>
+        </tr><%end%>
 
-          <% if @venue.drink_4.present? %> <dd><%= @venue.drink_4 %>
-              <%if @venue.drink_4_price != 0 %>
-              $<%=@venue.drink_4_price%> PP
-              <%end%>
-              </dd>
-          <% end %>
+        <%if @venue.drink_3.present? %><tr>
+        <td><%= @venue.drink_3 %></td>
+        <td><%if @venue.drink_3_price != nil %><%=@venue.drink_3_price%>
+            <%end%></td>
+        </tr><%end%>
 
-          <% if @venue.drink_5.present? %> <dd><%= @venue.drink_5 %>
-              <%if @venue.drink_5_price != 0 %>
-              $<%=@venue.drink_5_price%> PP
-              <%end%>
-              </dd>
-          <% end %>
-          </div>
-        </div>
+        <%if @venue.drink_4.present? %><tr>
+        <td><%= @venue.drink_4 %></td>
+        <td><%if @venue.drink_4_price != nil %><%=@venue.drink_4_price%>
+            <%end%></td>
+        </tr><%end%>
+
+        <%if @venue.drink_5.present? %><tr>
+        <td><%= @venue.drink_5 %></td>
+        <td><%if @venue.drink_5_price != nil %><%=@venue.drink_5_price%>
+            <%end%></td>
+        </tr><%end%>
+
+      </table>
+    </div>
+  </div>
+  <% end %>
 
 <hr>
 
