@@ -1,10 +1,11 @@
 <div class="page-header">
   <h1>
-    Venues
+    AnySpace
     <%if current_user.id == 1  %>
     <a href="/venues/new" class="btn btn-lg btn-success">New Venue</a>
     <%end%>
   </h1>
+  <h4>All the information you need to plan your Private Event</h4>
 </div><div class="row mb-1">
   <div class="col-md-12">
     <%= search_form_for @q, :class => "collapse", :id => "venues_filters" do |f| %>
