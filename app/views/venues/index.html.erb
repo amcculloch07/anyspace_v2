@@ -115,10 +115,7 @@
         <tr>
           <div class="row">
             <div class="col-sm-3">
-              <% venue.photos.each do |photo| %>
-              <img src="<%= photo.image_url %>" width=250>
-              <%end%>
-
+              <img src="<%= venue.photos.first.image_url %>" width=250>
             </div>
 
             <div class="col-sm-9">

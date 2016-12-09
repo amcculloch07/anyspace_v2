@@ -31,20 +31,24 @@
 <!-- Wrapper for slides -->
 
 <div class="carousel-inner" role="listbox">
-  <div class="item active">
+  <% if @venue.photos.count > 0 %>
+    <div class="item active">
+      <img src="<%= @venue.photos.first.image_url %>" alt="Image">
+      <div class="carousel-caption">
+      </div>
+    </div>
+
     <% @venue.photos.each do |photo| %>
-    <img src="<%= photo.image_url %>" alt="Image">
-    <div class="carousel-caption">
-    </div>
-    <%end%>
-  </div>
+      <% if photo.id != @venue.photos.first.id %>
+        <div class="item">
+          <img src="<%= photo.image_url %>" alt="Image">
+          <div class="carousel-caption">
+          </div>
+        </div>
+      <% end %>
+    <% end %>
 
-
-  <div class="item">
-    <img src="..." alt="...">
-    <div class="carousel-caption">
-    </div>
-  </div>
+  <% end %>
 </div>
 
 <!-- Controls -->
