@@ -87,7 +87,6 @@
         <th>Name</th>
         <th>Email address</th>
         <th>Phone number</th>
-        <th>Actions</th>
       </tr>
 
       <% @coordinators.each do |coordinator| %>
@@ -95,11 +94,13 @@
         <td><a href="/coordinators/<%= coordinator.id %>"><%= coordinator.name %></a></td>
         <td><%= coordinator.email_address %></td>
         <td><%= coordinator.phone_number %></td>
+        <% if current_user.id == 1  %>
         <td>
           <a href="/coordinators/<%= coordinator.id %>" class="btn btn-primary">Show</a>
           <a href="/coordinators/<%= coordinator.id %>/edit" class="btn btn-warning">Edit</a>
           <a href="/delete_coordinator/<%= coordinator.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
         </td>
+        <% end %>
       </tr>
       <% end %>
     </table>
