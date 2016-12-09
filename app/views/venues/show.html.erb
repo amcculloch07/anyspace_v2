@@ -96,7 +96,6 @@
 
       <dt>Capacity</dt>
       <dd><%= @venue.capacity %></dd>
-
 <hr>
       <%if @venue.food_1.present? %>
       <div class="row">
@@ -265,7 +264,7 @@
       <!-- Label and input for comment -->
       <div class="form-group">
         <label for="comment" class="control-label">
-          Review
+          Leave your own review
         </label>
 
         <input type="text" id="comment" name="comment" placeholder="Comments" class="form-control" value="">
@@ -286,7 +285,7 @@
 <!-- A Venue has many photos -->
 <%if current_user.id == 1  %>
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-6">
     <ul class="list-group">
       <li class="list-group-item list-group-item-info">
         Photos
